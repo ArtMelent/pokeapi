@@ -1,0 +1,43 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    .card-img-top {
+      width: 50%;
+      object-fit: contain;
+      border-right: 1px solid #ccc;
+    }
+  
+    .card-body {
+      width: 50%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+  
+      .card-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+  
+      .card-text {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      .list-group {
+        margin-top: 1rem;
+        width: 100%;
+  
+        .list-group-item {
+          font-size: 1.2rem;
+          background-color: transparent;
+          border: none;
+          border-top: 1px solid #ccc;
+        }
+      }
+    }
+  }
+  

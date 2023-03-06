@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Favorite Pokemon List</h1>
+  <div *ngIf="favoritePokemonList.length === 0">
+    <p>You don't have any favorite Pokemon yet.</p>
+  </div>
+  <div *ngFor="let pokemon of favoritePokemonList" class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-3 com-sm-12">
+        <img src="{{pokemon.sprites.front_default}}" alt="{{pokemon.name}} Image">
+      </div>
+      <div class="col-md-9 col-sm-12">
+        <div class="card-body">
+          <p class="card-text">{{pokemon.species.name}}</p>
+          <button class="btn btn-outline-danger" (click)="removeFavorite(pokemon.id)">Remove from Favorites</button>
+          <a routerLink="/pokemon/{{pokemon.name}}" class="btn btn-outline-primary">Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+
+.card-row{
+  padding: 20px;
+  display: grid;
+  grid-gap: 16px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  .card:hover .favorites{
+    display: block;
+    cursor: pointer;
+  }
+  .card{
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    button{
+      margin: 0 24px;
+    }
+  
+    .favorites{
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 1rem;
+      border-radius: 20px;
+      border: none;
+    }
+
+  .card-title{
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+    img{
+      width: 70%;
+      align-self: center;
+    }
+  }
+}
+
+
+
+
+// style="flex-basis: calc((100% - 3 * 24px) / 4)"

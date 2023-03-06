@@ -1,0 +1,16 @@
+<div class="card">
+  <img class="card-img-top" [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + pokemon?.id + '.png'" alt="{{ pokemon?.name }}" />
+  <div class="card-body">
+    <h5 class="card-title">{{ pokemon?.name }}</h5>
+    <p class="card-text">ID: {{ pokemon?.id }}</p>
+    <p class="card-text">Height: {{ pokemon?.height }}</p>
+    <p class="card-text">Weight: {{ pokemon?.weight }}</p>
+    <p class="card-text">Abilities: {{getAbilities()}} </p>
+    <p class="card-text">Stats:</p>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let stat of pokemon?.stats">
+        {{ stat.stat.name }}: {{ stat.base_stat }}
+      </li>
+    </ul>
+  </div>
+</div>
